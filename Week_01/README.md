@@ -264,12 +264,15 @@
    Process finished with exit code 0
    ```
 3. （**必做**）画一张图，展示 Xmx、Xms、Xmn、Meta、DirectMemory、Xss 这些内存参数的关系。
-![JVM内存模型](JVM内存模型.png)
+
+    ![JVM内存模型](JVM内存模型.png)
 4. （**选做**）检查一下自己维护的业务系统的 JVM 参数配置，用 jstat 和 jstack、jmap 查看一下详情，并且自己独立分析一下大概情况，思考有没有不合理的地方，如何改进。
 
     **注意：**
      - 对于线上有流量的系统，慎重使用 jmap 命令。
      - 如果没有线上系统，可以自己 run 一个 web/java 项目。或者直接查看 idea 进程。
+     
+    > 
     ```
         S0C      S1C     S0U    S1U         EC               EU           OC               OU           MC          MU       CCSC   CCSU    YGC     YGCT    FGC    FGCT     GCT
     15360.0 16384.0  0.0   5201.1 3726336.0 2794609.8 5670400.0  4331151.8  94040.0  87664.2 10112.0 9151.0  12747  187.551  11      4.262  191.813  
@@ -404,4 +407,5 @@
    -XX:+UseG1GC
    // ?
    -XX:-UseLargePagesIndividualAllocation
+   
    ```
