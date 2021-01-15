@@ -1,5 +1,5 @@
-#第一周作业
-##第一课 JVM 核心技术--基础知识
+# 第一周作业
+## 第一课 JVM 核心技术--基础知识
 1. （**选做**）自己写一个简单的 Hello.java，里面需要涉及基本类型，四则运行，if 和 for，然后自己分析一下对应的字节码，有问题群里讨论。
    > Hello.java
    ```
@@ -346,7 +346,7 @@
    - 启动JVM没有关闭自适应参数:-XX:-UseAdaptiveSizePolicy，致使各区分配占比混轮，需要添加此参数 进行优化。
    - 应把-Xmx分配为系统可用内存的0.6-0.8, 而不是默认全部。
    - 改用CG为G1，提升JVM综合性能。
-##第二课 JVM 核心技术--工具与 GC 策略
+## 第二课 JVM 核心技术--工具与 GC 策略
 1. （**选做**）本机使用 G1 GC 启动一个程序，仿照课上案例分析一下 JVM 情况。
     ```
     java -Xmx1g -Xms1g -XX:-UseAdaptiveSizePolicy -XX:+UseSerialGC -jar target/gateway-server- 0.0.1-SNAPSHOT.jar
