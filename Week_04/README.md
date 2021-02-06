@@ -178,7 +178,7 @@
 
 2. （**必做**）思考有多少种方式，在main函数启动一个新线程，运行一个方法，拿到这个方法的返回值后，退出主线程？ 
 
-​		见代码[MainOperation.java](https://github.com/JAVA-01/JAVA-01/tree/main/Week_04/MainOperation.java)。
+   ​	见代码[MainOperation.java](https://github.com/Movosoft/JAVA-01/tree/main/Week_04/MainOperation.java)。
 
 ## 第八课 Java并发编程(3)
 
@@ -263,4 +263,4 @@
 
 ​		xmind导出的图不全，而且太大，所以直接上传xmind格式文件。
 
-​		[多线程与并发.xmind](https://github.com/JAVA-01/JAVA-01/tree/main/Week_04/多线程与并发.xmind)
+​		[多线程与并发.xmind](https://github.com/Movosoft/JAVA-01/tree/main/Week_04/多线程与并发.xmind)
