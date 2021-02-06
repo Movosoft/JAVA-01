@@ -261,6 +261,6 @@
 
 4. （**必做**）把多线程和并发相关知识带你梳理一遍，画一个脑图，截图上传到 Github上。
 
-​		xmind导出的图不全，而且太大，所以直接上传xmind格式文件。
+   ​	xmind导出的图不全，而且太大，所以直接上传xmind格式文件。
 
-​		[多线程与并发.xmind](https://github.com/Movosoft/JAVA-01/tree/main/Week_04/多线程与并发.xmind)
+   ​	[多线程与并发.xmind](https://github.com/Movosoft/JAVA-01/tree/main/Week_04/多线程与并发.xmind)
