@@ -108,14 +108,14 @@ public class MainOperation {
         return entity05.get();
     }
 
-    // 06.CompletionStage方式
+    // 06.CompletableFuture方式
     public String func06() throws ExecutionException, InterruptedException {
-        CompletionStage<Entity> stage = CompletableFuture.supplyAsync(() -> {
+        CompletionStage<String> stage = CompletableFuture.supplyAsync(() -> {
             final Entity entity06 = new Entity();
             entity06.set("Hello thread06!");
-            return entity06;
+            return entity06.get();
         });
-        return stage.toCompletableFuture().get().get();
+        return stage.toCompletableFuture().get();
     }
 
     // 07.park
@@ -253,16 +253,6 @@ public class MainOperation {
         return exchanger.exchange(null);
     }
 
-    // 16.CompletableFuture
-    public String func16() throws ExecutionException, InterruptedException {
-        final Entity entity16 = new Entity();
-        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> {
-            entity16.set("Hello thread16!");
-            return entity16.get();
-        });
-        return completableFuture.get();
-    }
-
     public static void main(String[] args) throws InterruptedException, ExecutionException, BrokenBarrierException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         MainOperation operation = new MainOperation();
         // 01.主线程循环等待
@@ -275,7 +265,7 @@ public class MainOperation {
         operation.doAction("func04");
         // 05.子线程对象调用wait方法让主线程等待,thread05执行完会调用thread05.notifyAll()让线程继续
         operation.doAction("func05");
-        // 06.CompletionStage方式
+        // 06.CompletableFuture方式
         operation.doAction("func06");
         // 07.park
         operation.doAction("func07");
@@ -295,8 +285,6 @@ public class MainOperation {
         operation.doAction("func14");
         // 15.Exchanger
         operation.doAction("func15");
-        // 16.CompletableFuture
-        operation.doAction("func16");
     }
 
 }
