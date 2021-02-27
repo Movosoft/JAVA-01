@@ -228,9 +228,10 @@ public class HttpOutboundHandler {
             if(httpEntity != null) {
                 String content = new BufferedReader(new InputStreamReader(httpEntity.getContent())).lines().collect(Collectors.joining(System.lineSeparator()));
                 byte[] body = content.getBytes();
-                response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, Unpooled.wrappedBuffer(body));
+                response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK);
                 response.headers().set("Content-Type", httpEntity.getContentType().getValue());
                 response.headers().set("Content-Length", body.length);
+                response.headers().set("Content", body);
             } else {
                 response = new DefaultFullHttpResponse(HTTP_1_1, NO_CONTENT);
             }

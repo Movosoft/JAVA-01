@@ -48,7 +48,7 @@ public class HttpInboundServer {
                     .handler(new LoggingHandler(LogLevel.INFO))
                     .childHandler(new HttpInboundInitializer(proxyServers));
             Channel ch = serverBootstrap.bind(port).sync().channel();
-            System.out.println("开启netty http服务器，监听地址和端口为 http://127.0.0.1:" + port + '/');
+            System.out.println("开启netty http服务器，监听地址和端口为 http://10.0.3.15:" + port + '/');
             ch.closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();

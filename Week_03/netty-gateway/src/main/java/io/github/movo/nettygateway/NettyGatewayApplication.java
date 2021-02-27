@@ -10,7 +10,7 @@ public class NettyGatewayApplication {
 
     public static void main(String[] args) {
         String proxyPort = System.getProperty("proxyPort", "8890");
-        String proxyServers = System.getProperty("proxyServers","http://127.0.0.1:" + proxyPort + ",https://github.com");
+        String proxyServers = System.getProperty("proxyServers","http://10.0.3.15:" + proxyPort);
         int port = Integer.parseInt(proxyPort);
         HttpInboundServer server = new HttpInboundServer(port, Arrays.asList(proxyServers.split(",")));
         server.run();
