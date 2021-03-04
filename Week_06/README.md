@@ -17,6 +17,8 @@
 **2.（必做）**基于电商交易场景（用户、商品、订单），设计一套简单的表结构，提交 DDL 的 SQL 文件到 Github（后面 2 周的作业依然要是用到这个表结构）。
 
 ```
+CREATE SCHEMA `online_retailer` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+
 - 用户表
 用户id
 用户名
@@ -96,6 +98,7 @@ create table `dt_static_resource` (
 ) engine=innodb default charset=utf8mb4 collate=utf8mb4_bin;
 
 - 商品表
+商品id
 商品编码
 商品版本
 商品名称
@@ -110,6 +113,7 @@ create table `dt_static_resource` (
 删除标记
 
 create table `dt_wares` (
+  `wares_id` bigint(20) not null auto_increment comment '商品id',
   `wares_code` varchar(10) collate utf8mb4_bin not null comment '商品编码',
   `wares_version` int(11) not null comment '商品版本',
   `wares_name` varchar(10) collate utf8mb4_bin not null comment '商品名称',
@@ -121,13 +125,12 @@ create table `dt_wares` (
   `create_time` timestamp not null comment '创建时间',
   `last_update_time` timestamp not null comment '最后更新时间',
   `delete_tag` bit(1) default b'0' comment '删除标记',
-  primary key (`wares_code`,`wares_version`)
+  primary key (`wares_id`)
 ) engine=innodb default charset=utf8mb4 collate=utf8mb4_bin;
 
 - 库存表
 库存id
-商品编码
-商品版本
+商品id
 库存数量
 库存状态：可售、下架(数据字典id)
 创建时间
@@ -136,8 +139,7 @@ create table `dt_wares` (
 
 create table `dt_stock` (
   `stock_id` int(11) not null auto_increment comment '库存id',
-  `wares_code` varchar(10) collate utf8mb4_bin not null comment '商品编码',
-  `wares_version` int(11) not null comment '商品版本',
+  `wares_id` bigint(20) not null comment '商品id',
   `stock_num` int(11) not null comment '库存数量',
   `stock_status` int(11) not null comment '库存状态',
   `create_time` timestamp not null comment '创建时间',
@@ -149,8 +151,7 @@ create table `dt_stock` (
 - 购物车表
 购物车id
 买家id
-商品编码
-商品版本
+商品id
 商品数量
 创建时间
 最后更新时间
@@ -159,8 +160,7 @@ create table `dt_stock` (
 create table `dt_shopping_cart` (
   `sc_id` int(11) not null auto_increment comment '购物车id',
   `buyer_id` int(11) not null comment '买家id',
-  `wares_code` varchar(10) collate utf8mb4_bin not null comment '商品编码',
-  `wares_version` int(11) not null comment '商品版本',
+  `wares_id` bigint(20) not null comment '商品id',
   `wares_num` int(11) not null comment '商品数量',
   `create_time` timestamp not null comment '创建时间',
   `last_update_time` timestamp not null comment '最后更新时间',
@@ -169,6 +169,7 @@ create table `dt_shopping_cart` (
 ) engine=innodb default charset=utf8mb4 collate=utf8mb4_bin;
 
 - 订单表
+订单id
 订单号
 买家id
 订单状态(数据字典id)
@@ -183,6 +184,7 @@ create table `dt_shopping_cart` (
 删除标记
 
 create table `dt_order`  (
+  `order_id` bigint(20) not null auto_increment comment '订单id',
   `order_code` varchar(20) character set utf8mb4 collate utf8mb4_bin not null comment '订单号',
   `buyer_id` int(11) not null comment '买家id',
   `order_status` int(11) not null comment '订单状态',
@@ -195,14 +197,13 @@ create table `dt_order`  (
   `create_time` timestamp(0) not null comment '创建时间',
   `last_update_time` timestamp(0) not null comment '最后更新时间',
   `delete_tag` bit(1) null default b'0' comment '删除标记',
-  primary key (`order_code`) using btree
+  primary key (`order_id`)
 ) engine = innodb character set = utf8mb4 collate = utf8mb4_bin;
 
 -订单明细表
 订单明细id
 订单号
-商品编码
-商品版本
+商品id
 订单商品数量
 实付金额整数位
 实付金额小数位
@@ -213,16 +214,15 @@ create table `dt_order`  (
 create table `dt_order_detail`  (
   `order_detail_id` bigint(20) not null auto_increment comment '订单明细id',
   `order_code` varchar(20) character set utf8mb4 collate utf8mb4_bin not null comment '订单号',
-  `wares_code` varchar(10) character set utf8mb4 collate utf8mb4_bin not null comment '商品编码',
-  `wares_version` int(11) not null comment '商品版本',
+  `wares_id` bigint(20) not null comment '商品id',
   `wares_num` int(11) not null comment '订单商品数量',
   `pay_price_i` int(11) null default null comment '实付金额整数位',
   `pay_price_d` int(11) null default null comment '实付金额小数位',
   `create_time` timestamp(0) not null comment '创建时间',
   `last_update_time` timestamp(0) not null comment '最后更新时间',
   `delete_tag` bit(1) null default b'0' comment '删除标记',
-  primary key (`order_detail_id`) using btree
-) engine = innodb character set = utf8mb4 collate = utf8mb4_bin;
+  primary key (`order_detail_id`)
+) engine = innodb character set = utf8mb4 collate = utf8mb4_bin; 
 
 ```
 
