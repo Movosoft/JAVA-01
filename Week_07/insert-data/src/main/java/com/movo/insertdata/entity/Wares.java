@@ -8,6 +8,7 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 public class Wares {
+    private Long waresId;
     private String waresCode;
     private int waresVersion;
     private String waresName;
