@@ -1,11 +1,25 @@
 server:
   port: 8003
 spring:
-  # 数据库配置
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/online_retailer?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=UTC
-    username: root
-    password: movoroot
+    write:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3308/online_retailer?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=UTC
+      username: root
+      password: movo
+      jpa:
+        hibernate:
+          dialect:
+            org.hibernate.dialect.MySQL8Dialect
+    read1:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3311/online_retailer?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=UTC
+      username: root
+      password: movo1
+      jpa:
+        hibernate:
+          dialect:
+            org.hibernate.dialect.MySQL8Dialect
     # Hikari 连接池配置
     hikari:
       # 最小空闲连接数量
@@ -13,7 +27,7 @@ spring:
       # 空闲连接存活最大时间，默认600000（10分钟）
       idle-timeout: 180000
       # 连接池最大连接数，默认是10
-      maximum-pool-size: 30
+      maximum-pool-size: 1000
       # 此属性控制从池返回的连接的默认自动提交行为,默认值：true
       auto-commit: false
       # 连接池名称
@@ -23,3 +37,5 @@ spring:
       # 数据库连接超时时间,默认30秒，即30000
       connection-test-query: select 1
       connection-timeout: 30000
+
+      #alter user 'root'@'%' identified with mysql_native_password by 'movo1';
