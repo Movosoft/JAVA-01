@@ -6,7 +6,7 @@
 
 2. **(必做)**按自己设计的表结构，插入100万订单模拟数据，测试不同方式的插入效率。
 
-   [FastInsertController.java]: https://github.com/Movosoft/JAVA-01/blob/main/Week_07/insert-data/src/main/java/com/movo/insertdata/controller/FastInsertController.java
+   [FastInsertController.java](https://github.com/Movosoft/JAVA-01/blob/main/Week_07/insert-data/src/main/java/com/movo/insertdata/controller/FastInsertController.java)
 
 3. (选做)按自己设计的表结构，插入1000万订单模拟数据，测试不同方式的插入效率。
 
@@ -24,11 +24,11 @@
 
 2. **(必做)**读写分离-动态切换数据源版本1.0
 
-   [ReadDataController.java]: https://github.com/Movosoft/JAVA-01/blob/main/Week_07/insert-data/src/main/java/com/movo/insertdata/controller/ReadDataController.java
+   [ReadDataController.java](https://github.com/Movosoft/JAVA-01/blob/main/Week_07/insert-data/src/main/java/com/movo/insertdata/controller/ReadDataController.java)
 
 3. **(必做)**读写分离-数据库框架版本2.0
 
-   [shardingsphere-demo]: https://github.com/Movosoft/JAVA-01/tree/main/Week_07/shardingsphere-demo
+   [shardingsphere-demo](https://github.com/Movosoft/JAVA-01/tree/main/Week_07/shardingsphere-demo)
 
 4. (选做)读写分离-数据库中间件版本3.0
 
