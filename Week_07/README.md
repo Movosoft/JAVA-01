@@ -6,7 +6,7 @@
 
 2. **(必做)**按自己设计的表结构，插入100万订单模拟数据，测试不同方式的插入效率。
 
-   
+   [FastInsertController.java]: https://github.com/Movosoft/JAVA-01/blob/main/Week_07/insert-data/src/main/java/com/movo/insertdata/controller/FastInsertController.java
 
 3. (选做)按自己设计的表结构，插入1000万订单模拟数据，测试不同方式的插入效率。
 
@@ -15,6 +15,7 @@
 5. (选做)调整测试数据，使得数据尽量均匀，模拟1年时间内的交易，计算一年的销售报 表:销售总额，订单数，客单价，每月销售量，前十的商品等等(可以自己设计更多指标)。
 
 6. (选做)尝试自己做一个 ID 生成器(可以模拟 Seq 或 Snowflake)。 
+
 7. (选做)尝试实现或改造一个非精确分页的程序。
 
 ## 第十四课 超越分库分表-高可用与读写分离
@@ -23,11 +24,11 @@
 
 2. **(必做)**读写分离-动态切换数据源版本1.0
 
-   
+   [ReadDataController.java]: https://github.com/Movosoft/JAVA-01/blob/main/Week_07/insert-data/src/main/java/com/movo/insertdata/controller/ReadDataController.java
 
 3. **(必做)**读写分离-数据库框架版本2.0
 
-   
+   [shardingsphere-demo]: https://github.com/Movosoft/JAVA-01/tree/main/Week_07/shardingsphere-demo
 
 4. (选做)读写分离-数据库中间件版本3.0
 
