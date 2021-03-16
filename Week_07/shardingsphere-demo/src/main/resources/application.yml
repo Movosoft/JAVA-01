@@ -1,0 +1,25 @@
+server:
+  port: 8005
+spring:
+  shardingsphere:
+    datasource:
+      names: movo, movo1
+      common:
+        type: com.zaxxer.hikari.HikariDataSource
+      movo:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://10.0.2.131:3308/tfridb?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+        username: root
+        password: movo
+      movo1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://10.0.2.131:3311/tfridb?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+        username: root
+        password: movo1
+    rules:
+      read-write-splitting:
+        data-sources:
+          pr_ds:
+            write-data-source-name: movo
+            read-data-source-names: movo1
+            load-balancer-name: round_robin
