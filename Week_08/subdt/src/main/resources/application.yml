@@ -1,0 +1,39 @@
+server:
+  port: 8006
+spring:
+  shardingsphere:
+    datasource:
+      names: online-retailer0, online-retailer1
+      common:
+        type: com.zaxxer.hikari.HikariDataSource
+      online-retailer0:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3308/online_retailer0?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+        username: root
+        password: movo
+      online-retailer1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3308/online_retailer1?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+        username: root
+        password: movo
+    sharding:
+      default-database-strategy:
+        standard:
+          sharding-column: order_id
+          harding-algorithm-name: database_inline
+      sharding-algorithms:
+        databse_inline:
+          type: INLINE
+          props:
+            algorithm-expression=online-retailer$->{order_id % 2}
+      tables:
+        dt_order:
+          actual-data-nodes: online-retailer$->{0..1}.dt_order$->{0..4}
+          key-generate-strategy:
+            column: order_id
+            key-generator-name: snowflake
+          table-strategy:
+            inline:
+              sharding-column: order_id
+              algorithm-expression: dt_order$->{order_id % 16}
+
