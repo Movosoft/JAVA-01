@@ -1,1 +1,23 @@
+spring:
+  application:
+    name: dubbo-service-provider
+    service:
+      version: 1.0.0
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hmily_order?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: movoroot
 
+mybatis:
+  type-aliases-package: com.movo.dubboserviceapi.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+dubbo:
+  scan:
+    base-packages: com.movo.dubboserviceapi.service
+  protocol:
+    name: dubbo
+    port: 8100
+    host: 127.0.0.1
+  registry:
+    address: N/A

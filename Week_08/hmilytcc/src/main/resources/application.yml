@@ -4,5 +4,5 @@ spring:
   application:
     name: hmilytcc
     service:
-      url: dubbo://127.0.0.1:8300
+      url: dubbo://127.0.0.1:8100
       version: 1.0.0
