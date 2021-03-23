@@ -1,0 +1,9 @@
+com\movo\dubboserviceprovider\account\entity\Account.class
+com\movo\dubboserviceapi\enmus\OrderStatusEnum.class
+com\movo\dubboserviceapi\entity\Order.class
+com\movo\dubboserviceapi\service\InventoryService.class
+com\movo\dubboserviceapi\entity\Inventory.class
+com\movo\dubboserviceapi\service\AccountService.class
+com\movo\dubboserviceprovider\account\dto\AccountDTO.class
+com\movo\dubboserviceapi\dto\InventoryDTO.class
+com\movo\dubboserviceprovider\account\dto\AccountNestedDTO.class

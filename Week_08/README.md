@@ -6,7 +6,9 @@
 
 2. (**必做**)设计对前面的订单表数据进行水平分库分表，拆分2个库，每个库16张表。 并在新结构在演示常见的增删改查操作。代码、sql 和配置文件，上传到 Github。
 
-   
+   [代码](https://github.com/Movosoft/JAVA-01/tree/main/Week_08/subdt/src/test/java/com/movo/shardingsphere/subdt/SubdtApplicationTests.java)
+   [sql](https://github.com/Movosoft/JAVA-01/tree/main/Week_08/subdt/src/main/resources/templates/create.sql)
+   [配置文件](https://github.com/Movosoft/JAVA-01/tree/main/Week_08/subdt/src/main/java/com/movo/shardingsphere/subdt/config/MyDataSourceConfig.java)
 
 3. (选做)模拟1000万的订单单表数据，迁移到上面作业2的分库分表中。
 
@@ -17,8 +19,6 @@
 1. (选做)列举常见的分布式事务，简单分析其使用场景和优缺点。
 
 2. (**必做**)基于 hmily TCC 或 ShardingSphere 的 Atomikos XA 实现一个简单的分布 式事务应用 demo(二选一)，提交到 Github。
-
-   
 
 3. (选做)基于 ShardingSphere narayana XA 实现一个简单的分布式事务 demo。
 

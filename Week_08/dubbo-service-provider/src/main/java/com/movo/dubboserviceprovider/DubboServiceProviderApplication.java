@@ -1,13 +1,13 @@
-package com.movo.shardingsphere.subdt;
+package com.movo.dubboserviceprovider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SubdtApplication {
+public class DubboServiceProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SubdtApplication.class, args);
+        SpringApplication.run(DubboServiceProviderApplication.class, args);
     }
 
 }

@@ -1,13 +1,12 @@
-package com.movo.shardingsphere.subdt;
+package com.movo.hmilytcc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SubdtApplication {
+public class HmilytccApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SubdtApplication.class, args);
+        SpringApplication.run(HmilytccApplication.class, args);
     }
-
 }

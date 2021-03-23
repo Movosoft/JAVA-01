@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b3b79c6-7dce-4e31-9200-b8cb25606a77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dubbo-service-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/dto/AccountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/dto/AccountNestedDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/dto/InventoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/enmus/OrderStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/entity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/entity/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/movo/dubboserviceapi/service/InventoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceapi/dto/InventoryDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceapi/enmus/OrderStatusEnum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceapi/entity/Inventory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceapi/entity/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceapi/service/AccountService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceapi/service/InventoryService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceprovider/account/dto/AccountDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceprovider/account/dto/AccountNestedDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/movo/dubboserviceprovider/account/entity/Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/dubbo-service-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/java/com/movo/dubboserviceprovider/DubboServiceProviderApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/java/com/movo/dubboserviceprovider/account/mapper/AccountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/java/com/movo/dubboserviceprovider/account/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/java/com/movo/dubboserviceprovider/inventory/mapper/InventoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/java/com/movo/dubboserviceprovider/inventory/service/impl/InventoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/java/com/movo/dubboserviceprovider/order/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/java/com/movo/dubboserviceprovider/order/enums/OrderStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/java/com/movo/dubboserviceprovider/order/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dubbo-service-provider/src/test/java/com/movo/dubboserviceprovider/DubboServiceProviderApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/src/main/java/com/movo/hmilytcc/HmilytccApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/src/main/java/com/movo/hmilytcc/controller/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hmilytcc/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../subdt/src/main/java/com/movo/shardingsphere/subdt/config/MyDataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../subdt/src/main/java/com/movo/shardingsphere/subdt/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../subdt/src/main/java/com/movo/shardingsphere/subdt/keygenerator/MySnowflakeKeyGenerateAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../subdt/src/main/resources/META-INF/services/org.apache.shardingsphere.sharding.spi.KeyGenerateAlgorithm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week_02/work/JavaCourseCodes" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week_02/work/JavaCourseCodes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../subdt/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../subdt/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../subdt/src/main/java/com/movo/shardingsphere/subdt/SubdtApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../subdt/src/main/java/com/movo/shardingsphere/subdt/SubdtApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../subdt/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../subdt/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../subdt/src/main/resources/templates/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../subdt/src/main/resources/templates/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../subdt/src/test/java/com/movo/shardingsphere/subdt/SubdtApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../subdt/src/test/java/com/movo/shardingsphere/subdt/SubdtApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\repositories\" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.2\plugins\maven\lib\maven3" />
+        <option name="userSettingsFile" value="F:\nexus\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1q6U1McvciI9f4xEAv4R8WLu9yB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.movo.dubboserviceapi.enmus" />
+      <recent name="com.movo.dubboserviceapi.entity" />
+      <recent name="com.movo.dubboserviceapi.dto" />
+      <recent name="com.movo.dubboserviceapi.service" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b3b79c6-7dce-4e31-9200-b8cb25606a77" name="Default Changelist" comment="" />
+      <created>1616399317959</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616399317959</updated>
+      <workItem from="1616399319234" duration="4006000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
