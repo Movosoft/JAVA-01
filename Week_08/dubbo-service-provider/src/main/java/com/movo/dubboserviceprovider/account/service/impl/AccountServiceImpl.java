@@ -1,13 +1,16 @@
 package com.movo.dubboserviceprovider.account.service.impl;
 
+import com.movo.dubboserviceapi.dto.AccountDTO;
+import com.movo.dubboserviceapi.dto.AccountNestedDTO;
 import com.movo.dubboserviceapi.dto.InventoryDTO;
+import com.movo.dubboserviceapi.entity.Account;
 import com.movo.dubboserviceapi.service.AccountService;
 import com.movo.dubboserviceapi.service.InventoryService;
-import com.movo.dubboserviceprovider.account.dto.AccountDTO;
-import com.movo.dubboserviceprovider.account.dto.AccountNestedDTO;
-import com.movo.dubboserviceprovider.account.entity.Account;
 import com.movo.dubboserviceprovider.account.mapper.AccountMapper;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.dromara.hmily.annotation.HmilyTAC;
+import org.dromara.hmily.annotation.HmilyTCC;
+import org.dromara.hmily.common.exception.HmilyRuntimeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,27 +52,25 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancel")
+    @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancel")
     public boolean payment(AccountDTO accountDTO) {
         int count =  accountMapper.update(accountDTO);
         if (count > 0) {
             return true;
         } else {
-//            throw new HmilyRuntimeException("账户扣减异常！");
-            return false;
+            throw new HmilyRuntimeException("账户扣减异常！");
         }
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancel")
+    @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancel")
     public boolean mockTryPaymentException(AccountDTO accountDTO) {
-//        throw new HmilyRuntimeException("账户扣减异常！");
-        return false;
+        throw new HmilyRuntimeException("账户扣减异常！");
     }
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-//    @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancel")
+    @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancel")
     public boolean mockTryPaymentTimeout(AccountDTO accountDTO) {
         try {
             //模拟延迟 当前线程暂停10秒
@@ -79,14 +80,13 @@ public class AccountServiceImpl implements AccountService {
         }
         final int decrease = accountMapper.update(accountDTO);
         if (decrease != 1) {
-//            throw new HmilyRuntimeException("库存不足");
-            return false;
+            throw new HmilyRuntimeException("库存不足");
         }
         return true;
     }
 
     @Override
-//    @HmilyTAC
+    @HmilyTAC
     public boolean paymentTAC(AccountDTO accountDTO) {
         return accountMapper.updateTAC(accountDTO) > 0;
     }
@@ -98,7 +98,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmNested", cancelMethod = "cancelNested")
+    @HmilyTCC(confirmMethod = "confirmNested", cancelMethod = "cancelNested")
     @Transactional(rollbackFor = Exception.class)
     public boolean paymentWithNested(AccountNestedDTO accountNestedDTO) {
         AccountDTO dto = new AccountDTO();
@@ -113,7 +113,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmNested", cancelMethod = "cancelNested")
+    @HmilyTCC(confirmMethod = "confirmNested", cancelMethod = "cancelNested")
     @Transactional(rollbackFor = Exception.class)
     public boolean paymentWithNestedException(AccountNestedDTO accountNestedDTO) {
         AccountDTO dto = new AccountDTO();
@@ -190,7 +190,7 @@ public class AccountServiceImpl implements AccountService {
     @Transactional(rollbackFor = Exception.class)
     public boolean cancel(AccountDTO accountDTO) {
         LOGGER.info("============ dubbo tcc 执行取消付款接口===============");
-        final Account accountDO = accountMapper.findByUserId(accountDTO.getUserId());
+        accountMapper.findByUserId(accountDTO.getUserId());
         accountMapper.cancel(accountDTO);
         return Boolean.TRUE;
     }

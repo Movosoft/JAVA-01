@@ -2,6 +2,7 @@ package com.movo.dubboserviceapi.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -11,7 +12,7 @@ import java.util.Date;
  * @create 2021/3/22 11:36
  */
 @Data
-public class Order {
+public class Order implements Serializable {
     private Integer id;
 
     /**

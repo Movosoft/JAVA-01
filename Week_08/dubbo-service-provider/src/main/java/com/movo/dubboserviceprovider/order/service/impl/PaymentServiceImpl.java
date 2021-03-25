@@ -1,16 +1,19 @@
 package com.movo.dubboserviceprovider.order.service.impl;
 
+import com.movo.dubboserviceapi.dto.AccountDTO;
+import com.movo.dubboserviceapi.dto.AccountNestedDTO;
 import com.movo.dubboserviceapi.dto.InventoryDTO;
 import com.movo.dubboserviceapi.enmus.OrderStatusEnum;
+import com.movo.dubboserviceapi.entity.Account;
 import com.movo.dubboserviceapi.entity.Order;
 import com.movo.dubboserviceapi.service.AccountService;
 import com.movo.dubboserviceapi.service.InventoryService;
 import com.movo.dubboserviceapi.service.PaymentService;
-import com.movo.dubboserviceprovider.account.dto.AccountDTO;
-import com.movo.dubboserviceprovider.account.dto.AccountNestedDTO;
-import com.movo.dubboserviceprovider.account.entity.Account;
 import com.movo.dubboserviceprovider.order.mapper.OrderMapper;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.dromara.hmily.annotation.HmilyTAC;
+import org.dromara.hmily.annotation.HmilyTCC;
+import org.dromara.hmily.common.exception.HmilyRuntimeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +40,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public void makePayment(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAYING);
         //做库存和资金账户的检验工作 这里只是demo 。。。
@@ -57,7 +60,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-//    @HmilyTAC
+    @HmilyTAC
     public void makePaymentForTAC(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAY_SUCCESS);
         //扣除用户余额
@@ -81,31 +84,31 @@ public class PaymentServiceImpl implements PaymentService {
      * @param order 订单实体
      */
     @Override
-//    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public void makePaymentWithNested(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAYING);
         final Account account = accountService.findByUserId(order.getUserId());
         if (account.getBalance().compareTo(order.getTotalAmount()) <= 0) {
-//            throw new HmilyRuntimeException("余额不足！");
+            throw new HmilyRuntimeException("余额不足！");
         }
         //扣除用户余额
         accountService.paymentWithNested(buildAccountNestedDTO(order));
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public void makePaymentWithNestedException(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAYING);
         final Account account = accountService.findByUserId(order.getUserId());
         if (account.getBalance().compareTo(order.getTotalAmount()) <= 0) {
-//            throw new HmilyRuntimeException("余额不足！");
+            throw new HmilyRuntimeException("余额不足！");
         }
         //扣除用户余额
         accountService.paymentWithNestedException(buildAccountNestedDTO(order));
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public String mockPaymentInventoryWithTryException(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAYING);
         //扣除用户余额
@@ -115,7 +118,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-//    @HmilyTAC
+    @HmilyTAC
     @Transactional
     public String mockTacPaymentInventoryWithTryException(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAY_SUCCESS);
@@ -124,7 +127,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public String mockPaymentInventoryWithTryTimeout(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAYING);
         //扣除用户余额
@@ -134,7 +137,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public String mockPaymentAccountWithTryException(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAYING);
         accountService.mockTryPaymentException(buildAccountDTO(order));
@@ -142,7 +145,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public String mockPaymentAccountWithTryTimeout(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAYING);
         accountService.mockTryPaymentTimeout(buildAccountDTO(order));
@@ -150,7 +153,7 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     @Override
-//    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
+    @HmilyTCC(confirmMethod = "confirmOrderStatus", cancelMethod = "cancelOrderStatus")
     public String mockPaymentInventoryWithConfirmTimeout(Order order) {
         updateOrderStatus(order, OrderStatusEnum.PAYING);
         //扣除用户余额

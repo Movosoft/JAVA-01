@@ -1,6 +1,7 @@
 package com.movo.dubboserviceapi.service;
 
 import com.movo.dubboserviceapi.entity.Order;
+import org.dromara.hmily.annotation.Hmily;
 
 import java.math.BigDecimal;
 
@@ -17,6 +18,7 @@ public interface OrderService {
      * @param amount 支付金额
      * @return string string
      */
+    @Hmily
     String orderPay(Integer count, BigDecimal amount);
 
     /**
@@ -26,6 +28,7 @@ public interface OrderService {
      * @param amount the amount
      * @return the string
      */
+    @Hmily
     String saveOrderForTAC(Integer count, BigDecimal amount);
 
     /**
@@ -35,6 +38,7 @@ public interface OrderService {
      * @param amount the amount
      * @return the string
      */
+    @Hmily
     String testOrderPay(Integer count, BigDecimal amount);
 
     /**
@@ -45,6 +49,7 @@ public interface OrderService {
      * @param amount 支付金额
      * @return string string
      */
+    @Hmily
     String orderPayWithNested(Integer count, BigDecimal amount);
 
     /**
@@ -54,6 +59,7 @@ public interface OrderService {
      * @param amount the amount
      * @return the string
      */
+    @Hmily
     String orderPayWithNestedException(Integer count, BigDecimal amount);
 
     /**
@@ -63,6 +69,7 @@ public interface OrderService {
      * @param amount 支付金额
      * @return string string
      */
+    @Hmily
     String mockInventoryWithTryException(Integer count, BigDecimal amount);
 
     /**
@@ -72,6 +79,7 @@ public interface OrderService {
      * @param amount the amount
      * @return the string
      */
+    @Hmily
     String mockTacInventoryWithTryException(Integer count, BigDecimal amount);
 
     /**
@@ -81,6 +89,7 @@ public interface OrderService {
      * @param amount 支付金额
      * @return string string
      */
+    @Hmily
     String mockInventoryWithTryTimeout(Integer count, BigDecimal amount);
 
     /**
@@ -90,6 +99,7 @@ public interface OrderService {
      * @param amount 支付金额
      * @return string string
      */
+    @Hmily
     String mockAccountWithTryException(Integer count, BigDecimal amount);
 
     /**
@@ -99,6 +109,7 @@ public interface OrderService {
      * @param amount 支付金额
      * @return string string
      */
+    @Hmily
     String mockAccountWithTryTimeout(Integer count, BigDecimal amount);
 
     /**
@@ -108,6 +119,7 @@ public interface OrderService {
      * @param amount 支付金额
      * @return string string
      */
+    @Hmily
     String mockInventoryWithConfirmTimeout(Integer count, BigDecimal amount);
 
     /**
@@ -115,5 +127,6 @@ public interface OrderService {
      *
      * @param order 订单实体类
      */
+    @Hmily
     boolean updateOrderStatus(Order order);
 }

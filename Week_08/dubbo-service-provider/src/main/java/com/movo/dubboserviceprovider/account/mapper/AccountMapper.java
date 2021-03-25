@@ -1,7 +1,7 @@
 package com.movo.dubboserviceprovider.account.mapper;
 
-import com.movo.dubboserviceprovider.account.dto.AccountDTO;
-import com.movo.dubboserviceprovider.account.entity.Account;
+import com.movo.dubboserviceapi.dto.AccountDTO;
+import com.movo.dubboserviceapi.entity.Account;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 

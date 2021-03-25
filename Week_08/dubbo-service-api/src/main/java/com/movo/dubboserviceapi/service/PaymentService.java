@@ -1,6 +1,7 @@
 package com.movo.dubboserviceapi.service;
 
 import com.movo.dubboserviceapi.entity.Order;
+import org.dromara.hmily.annotation.Hmily;
 
 /**
  * The interface Payment service.
@@ -13,6 +14,7 @@ public interface PaymentService {
      *
      * @param order 订单实体
      */
+    @Hmily
     void makePayment(Order order);
 
     /**
@@ -20,6 +22,7 @@ public interface PaymentService {
      *
      * @param order the order
      */
+    @Hmily
     void makePaymentForTAC(Order order);
 
     /**
@@ -27,6 +30,7 @@ public interface PaymentService {
      *
      * @param order the order
      */
+    @Hmily
     void testMakePayment(Order order);
 
     /**
@@ -34,6 +38,7 @@ public interface PaymentService {
      *
      * @param order 订单实体
      */
+    @Hmily
     void makePaymentWithNested(Order order);
 
     /**
@@ -41,6 +46,7 @@ public interface PaymentService {
      *
      * @param order the order
      */
+    @Hmily
     void makePaymentWithNestedException(Order order);
 
     /**
@@ -49,6 +55,7 @@ public interface PaymentService {
      * @param order 订单实体
      * @return String string
      */
+    @Hmily
     String mockPaymentInventoryWithTryException(Order order);
 
     /**
@@ -57,6 +64,7 @@ public interface PaymentService {
      * @param order the order
      * @return the string
      */
+    @Hmily
     String mockTacPaymentInventoryWithTryException(Order order);
 
     /**
@@ -65,6 +73,7 @@ public interface PaymentService {
      * @param order 订单实体
      * @return String string
      */
+    @Hmily
     String mockPaymentInventoryWithTryTimeout(Order order);
 
     /**
@@ -73,6 +82,7 @@ public interface PaymentService {
      * @param order the order
      * @return the string
      */
+    @Hmily
     String mockPaymentAccountWithTryException(Order order);
 
     /**
@@ -81,6 +91,7 @@ public interface PaymentService {
      * @param order the order
      * @return the string
      */
+    @Hmily
     String mockPaymentAccountWithTryTimeout(Order order);
 
     /**
@@ -89,6 +100,7 @@ public interface PaymentService {
      * @param order 订单实体
      * @return String string
      */
+    @Hmily
     String mockPaymentInventoryWithConfirmTimeout(Order order);
 
 }

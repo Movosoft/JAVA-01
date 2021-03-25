@@ -1,8 +1,9 @@
 package com.movo.dubboserviceapi.service;
 
-import com.movo.dubboserviceprovider.account.dto.AccountDTO;
-import com.movo.dubboserviceprovider.account.dto.AccountNestedDTO;
-import com.movo.dubboserviceprovider.account.entity.Account;
+import com.movo.dubboserviceapi.dto.AccountDTO;
+import com.movo.dubboserviceapi.dto.AccountNestedDTO;
+import com.movo.dubboserviceapi.entity.Account;
+import org.dromara.hmily.annotation.Hmily;
 
 /**
  * The interface Account service.
@@ -16,6 +17,7 @@ public interface AccountService {
      *
      * @param accountDTO 参数dto
      */
+    @Hmily
     boolean payment(AccountDTO accountDTO);
 
     /**
@@ -23,6 +25,7 @@ public interface AccountService {
      *
      * @param accountDTO the account dto
      */
+    @Hmily
     boolean mockTryPaymentException(AccountDTO accountDTO);
 
     /**
@@ -30,6 +33,7 @@ public interface AccountService {
      *
      * @param accountDTO the account dto
      */
+    @Hmily
     boolean mockTryPaymentTimeout(AccountDTO accountDTO);
 
     /**
@@ -38,6 +42,7 @@ public interface AccountService {
      * @param accountDTO the account dto
      * @return the boolean
      */
+    @Hmily
     boolean paymentTAC(AccountDTO accountDTO);
 
     /**
@@ -46,6 +51,7 @@ public interface AccountService {
      * @param accountDTO the account dto
      * @return the boolean
      */
+    @Hmily
     boolean testPayment(AccountDTO accountDTO);
 
     /**
@@ -54,6 +60,7 @@ public interface AccountService {
      * @param accountNestedDTO 参数dto
      * @return true boolean
      */
+    @Hmily
     boolean paymentWithNested(AccountNestedDTO accountNestedDTO);
 
     /**
@@ -62,6 +69,7 @@ public interface AccountService {
      * @param accountNestedDTO the account nested dto
      * @return the boolean
      */
+    @Hmily
     boolean paymentWithNestedException(AccountNestedDTO accountNestedDTO);
 
     /**
@@ -70,5 +78,6 @@ public interface AccountService {
      * @param userId 用户id
      * @return AccountDO account do
      */
+    @Hmily
     Account findByUserId(String userId);
 }

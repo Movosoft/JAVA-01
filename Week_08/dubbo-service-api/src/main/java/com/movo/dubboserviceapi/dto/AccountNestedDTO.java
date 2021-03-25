@@ -1,4 +1,4 @@
-package com.movo.dubboserviceprovider.account.dto;
+package com.movo.dubboserviceapi.dto;
 
 import lombok.Data;
 
