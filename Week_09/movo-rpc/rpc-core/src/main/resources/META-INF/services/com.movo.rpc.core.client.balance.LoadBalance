@@ -1,0 +1,4 @@
+com.movo.rpc.core.client.balance.impl.FullRoundBalance
+com.movo.rpc.core.client.balance.impl.RandomBalance
+com.movo.rpc.core.client.balance.impl.SmoothWeightRoundBalance
+com.movo.rpc.core.client.balance.impl.WeightRoundBalance

@@ -1,0 +1,5 @@
+server:
+  port: 8010
+movo:
+  rpc:
+    protocol: protobuf

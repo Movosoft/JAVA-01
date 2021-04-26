@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "movo.rpc",
+      "type": "com.movo.rpc.core.config.properties.RpcProperty",
+      "sourceType": "com.movo.rpc.core.config.properties.RpcProperty"
+    }
+  ],
+  "properties": [
+    {
+      "name": "movo.rpc.load-balance",
+      "type": "java.lang.String",
+      "description": "负载均衡算法",
+      "sourceType": "com.movo.rpc.core.config.properties.RpcProperty",
+      "defaultValue": "smoothWeightRound"
+    },
+    {
+      "name": "movo.rpc.protocol",
+      "type": "java.lang.String",
+      "description": "服务消息协议",
+      "sourceType": "com.movo.rpc.core.config.properties.RpcProperty",
+      "defaultValue": "java"
+    },
+    {
+      "name": "movo.rpc.register-address",
+      "type": "java.lang.String",
+      "description": "服务注册中心地址",
+      "sourceType": "com.movo.rpc.core.config.properties.RpcProperty",
+      "defaultValue": "10.0.3.15:2181"
+    },
+    {
+      "name": "movo.rpc.server-port",
+      "type": "java.lang.Integer",
+      "description": "服务暴露端口",
+      "sourceType": "com.movo.rpc.core.config.properties.RpcProperty",
+      "defaultValue": 333
+    },
+    {
+      "name": "movo.rpc.weight",
+      "type": "java.lang.Integer",
+      "description": "权重，默认为1",
+      "sourceType": "com.movo.rpc.core.config.properties.RpcProperty",
+      "defaultValue": 1
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,9 @@
+
+F
+java:S33987"0Move this method into "ClientInvocationHandler".(ÀÃæ­
+A
+java:S18609"&Synchronize on a new "Object" instead.(›ãòÞýÿÿÿÿ
+k
+java:S24459"P"serviceName" is a method parameter, and should not be used for synchronization.(›ãòÞýÿÿÿÿ
+T
+java:S1155<">Use isEmpty() to check whether the collection is empty or not.(²ë±ð

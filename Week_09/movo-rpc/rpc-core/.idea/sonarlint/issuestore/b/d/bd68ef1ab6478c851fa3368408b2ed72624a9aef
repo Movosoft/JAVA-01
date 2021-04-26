@@ -1,0 +1,8 @@
+
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(¢Î£ø
+B
+java:S3011{",This accessibility update should be removed.(˜ÂÓ˜
+h
+java:S37762"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Çˆ…µ
+B
+java:S3011~",This accessibility bypass should be removed.(ÂÀ½Ÿ

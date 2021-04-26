@@ -1,0 +1,3 @@
+com.movo.rpc.core.common.protocol.impl.JavaSerializeMessageProtocol
+com.movo.rpc.core.common.protocol.impl.KryoMessageProtocol
+com.movo.rpc.core.common.protocol.impl.ProtoBufMessageProtocol

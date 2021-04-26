@@ -1,0 +1,11 @@
+com\movo\account\api\entity\AccountUsdFreeze$AccountUsdFreezeBuilder.class
+com\movo\account\api\entity\AccountUsdFreeze.class
+com\movo\account\api\service\IDubboAccountService.class
+com\movo\account\api\contants\AccountConstant.class
+com\movo\account\api\entity\AccountCny.class
+com\movo\account\api\entity\AccountCnyFreeze$AccountCnyFreezeBuilder.class
+com\movo\account\api\to\SwitchAccountRequest.class
+com\movo\account\api\model\ResponseResult.class
+com\movo\account\api\service\IAccountService.class
+com\movo\account\api\entity\AccountUsd.class
+com\movo\account\api\entity\AccountCnyFreeze.class

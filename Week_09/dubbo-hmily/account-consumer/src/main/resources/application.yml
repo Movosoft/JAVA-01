@@ -1,0 +1,8 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: account-consumer
+    service:
+      url: dubbo://127.0.0.1:20000
+      version: 1.0.0
