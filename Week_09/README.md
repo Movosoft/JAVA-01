@@ -12,6 +12,8 @@
    2）尝试将客户端动态代理改成AOP，添加异常处理
    3）尝试使用Netty+HTTP作为client端传输方式
 
+   [movo-rpc](https://github.com/Movosoft/JAVA-01/tree/main/Week_09/movo-rpc)
+
    ```
    ServiceRegister - 服务注册器（接口），注册服务、获取服务
        DefaultServiceRegister实现
@@ -67,7 +69,7 @@
 
    3）设计账户表，冻结资产表，实现上述两个本地事务的分布式事务。 
 
-   
+   [dubbo-hmily](https://github.com/Movosoft/JAVA-01/tree/main/Week_09/dubbo-hmily)
 
 4. （挑战☆☆）尝试扩展Dubbo 
 
