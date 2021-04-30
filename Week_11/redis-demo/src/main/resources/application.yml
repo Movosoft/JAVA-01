@@ -1,0 +1,6 @@
+server:
+  port: 8060
+spring:
+  redis:
+    redisson:
+      file: classpath:redisson.yml
