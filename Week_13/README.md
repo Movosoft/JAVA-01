@@ -6,7 +6,7 @@
 
    的操作，将代码提交到github。 
 
-   kafka-demo
+   [kafka-demo](https://github.com/Movosoft/JAVA-01/tree/main/Week_13/kafka-demo)
 
 2. （选做）安装kafka-manager工具，监控kafka集群状态。 
 
@@ -36,6 +36,6 @@
 
    个功能点，把设计思路和实现代码，提交到github。 
 
-   kmq-demo
+   [kmq-demo](https://github.com/Movosoft/JAVA-01/tree/main/Week_13/kmq-demo)
 
 3. （挑战☆☆☆☆☆）完成所有其他版本的要求。期限一年。
