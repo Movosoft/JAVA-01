@@ -36,6 +36,6 @@
 
    个功能点，把设计思路和实现代码，提交到github。 
 
-   [kmq-demo](https://github.com/Movosoft/JAVA-01/tree/main/Week_13/kmq-demo)
+   [kmq-core](https://github.com/Movosoft/JAVA-01/tree/main/Week_13/kmq-core)
 
 3. （挑战☆☆☆☆☆）完成所有其他版本的要求。期限一年。
