@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    bootstrap-servers: 10.0.3.15:5001,10.0.3.15:5002,10.0.3.15:5003
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: kafka-test
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
